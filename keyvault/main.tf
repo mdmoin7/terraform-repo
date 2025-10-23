@@ -183,5 +183,5 @@ resource "azurerm_linux_virtual_machine" "main" {
     version   = "latest"
   }
 
-  # custom_data = 
+  custom_data = filebase64(("${path.module}/scripts/setup-webserver.sh"))
 }
